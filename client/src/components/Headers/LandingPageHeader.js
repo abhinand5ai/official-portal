@@ -1,22 +1,22 @@
-import React from "react"
+import React from 'react'
 
 // reactstrap components
-import { Container,Button } from "reactstrap";
-import backgroundImage from "assets/img/csegsa/Academic.JPG"
+import { Container, Button } from 'reactstrap'
+import backgroundImage from 'assets/img/csegsa/Academic.JPG'
 // core components
 
 function LandingPageHeader() {
-  let pageHeader = React.createRef()
+  const pageHeader = React.createRef()
 
   React.useEffect(() => {
     if (window.innerWidth < 991) {
       const updateScroll = () => {
-        let windowScrollTop = window.pageYOffset / 3
-        pageHeader.current.style.transform = "translate3d(0," + windowScrollTop + "px,0)"
+        const windowScrollTop = window.pageYOffset / 3
+        pageHeader.current.style.transform = 'translate3d(0,' + windowScrollTop + 'px,0)'
       }
-      window.addEventListener("scroll", updateScroll)
+      window.addEventListener('scroll', updateScroll)
       return function cleanup() {
-        window.removeEventListener("scroll", updateScroll)
+        window.removeEventListener('scroll', updateScroll)
       }
     }
   })
@@ -25,19 +25,23 @@ function LandingPageHeader() {
     <>
       <div
         style={{
-          backgroundImage: "url(" + backgroundImage + ")"
+          backgroundImage: 'url(' + backgroundImage + ')'
         }}
-        className='page-header'
+        className="page-header"
         data-parallax={true}
         ref={pageHeader}
       >
-        <div className='filter' />
+        <div className="filter" />
         <Container>
           <div className="motto text-center">
-            <h1><b>CSEGSA</b></h1>
-            <h3><b>Computer Science and Engineering Graduate Student Association</b></h3>
+            <h1>
+              <b>CSEGSA</b>
+            </h1>
+            <h3>
+              <b>Computer Science and Engineering Graduate Student Association</b>
+            </h3>
             <Button className="btn-round" color="danger" href="#about">
-                        Learn More
+              Learn More
             </Button>
           </div>
         </Container>

@@ -1,84 +1,84 @@
-import React from "react"
+import React from 'react'
 
 // reactstrap components
-import { Button, Card, Form, Input, Container, Row, Col } from "reactstrap"
+import { Button, Card, Form, Input, Container, Row, Col } from 'reactstrap'
 
 // core components
-import MainNavbar from "components/Navbars/MainNavbar.js"
-import backgroundImage from "assets/img/csegsa/Academic.JPG"
+import MainNavbar from 'components/Navbars/MainNavbar.js'
+import backgroundImage from 'assets/img/csegsa/Academic.JPG'
 
 function RegisterPage() {
-  document.documentElement.classList.remove("nav-open")
+  document.documentElement.classList.remove('nav-open')
   React.useEffect(() => {
-    document.body.classList.add("register-page")
+    document.body.classList.add('register-page')
     return function cleanup() {
-      document.body.classList.remove("register-page")
+      document.body.classList.remove('register-page')
     }
   })
   return (
     <>
       <MainNavbar />
       <div
-        className='page-header'
+        className="page-header"
         style={{
-          backgroundImage: "url(" + backgroundImage + ")"
+          backgroundImage: 'url(' + backgroundImage + ')'
         }}
       >
-        <div className='filter' />
+        <div className="filter" />
         <Container>
           <Row>
-            <Col className='ml-auto mr-auto' lg='4'>
-              <Card className='card-register ml-auto mr-auto'>
-                <h3 className='title mx-auto'>Welcome</h3>
-                <div className='social-line text-center'>
+            <Col className="ml-auto mr-auto" lg="4">
+              <Card className="card-register ml-auto mr-auto">
+                <h3 className="title mx-auto">Welcome</h3>
+                <div className="social-line text-center">
                   <Button
-                    className='btn-neutral btn-just-icon mr-1'
-                    color='facebook'
-                    href='#pablo'
+                    className="btn-neutral btn-just-icon mr-1"
+                    color="facebook"
+                    href="#pablo"
                     onClick={e => e.preventDefault()}
                   >
-                    <i className='fa fa-facebook-square' />
+                    <i className="fa fa-facebook-square" />
                   </Button>
                   <Button
-                    className='btn-neutral btn-just-icon mr-1'
-                    color='google'
-                    href='#pablo'
+                    className="btn-neutral btn-just-icon mr-1"
+                    color="google"
+                    href="#pablo"
                     onClick={e => e.preventDefault()}
                   >
-                    <i className='fa fa-google-plus' />
+                    <i className="fa fa-google-plus" />
                   </Button>
                   <Button
-                    className='btn-neutral btn-just-icon'
-                    color='twitter'
-                    href='#pablo'
+                    className="btn-neutral btn-just-icon"
+                    color="twitter"
+                    href="#pablo"
                     onClick={e => e.preventDefault()}
                   >
-                    <i className='fa fa-twitter' />
+                    <i className="fa fa-twitter" />
                   </Button>
                 </div>
-                <Form className='register-form'>
+                <Form className="register-form">
                   <label>Email</label>
-                  <Input placeholder='Email' type='text' />
+                  <Input placeholder="Email" type="text" />
                   <label>Password</label>
-                  <Input placeholder='Password' type='password' />
-                  <Button block className='btn-round' color='danger'>
+                  <Input placeholder="Password" type="password" />
+                  <Button block className="btn-round" color="danger">
                     Login
                   </Button>
                 </Form>
-                <div className='forgot'>
+                <div className="forgot">
                   <Button
-                    className='btn-link'
-                    color='danger'
-                    href='#pablo'
+                    className="btn-link"
+                    color="danger"
+                    href="#pablo"
                     onClick={e => e.preventDefault()}
                   >
                     Register new account?
                   </Button>
                   <Button
-                    className='btn-link'
-                    style={{ marginTop: "0px" }}
-                    color='danger'
-                    href='#pablo'
+                    className="btn-link"
+                    style={{ marginTop: '0px' }}
+                    color="danger"
+                    href="#pablo"
                     onClick={e => e.preventDefault()}
                   >
                     Forgot password?
@@ -88,7 +88,7 @@ function RegisterPage() {
             </Col>
           </Row>
         </Container>
-        <div className='footer register-footer text-center'>
+        <div className="footer register-footer text-center">
           <h6>© {new Date().getFullYear()}, CSEGSA, all rights reserved.</h6>
         </div>
       </div>

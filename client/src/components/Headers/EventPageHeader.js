@@ -1,21 +1,21 @@
-import React from "react"
+import React from 'react'
 
 // reactstrap components
-import { Container } from "reactstrap"
+import { Container } from 'reactstrap'
 // core components
 
 function EventPageHeader() {
-  let pageHeader = React.createRef()
+  const pageHeader = React.createRef()
 
   React.useEffect(() => {
     if (window.innerWidth < 991) {
       const updateScroll = () => {
-        let windowScrollTop = window.pageYOffset / 3
-        pageHeader.current.style.transform = "translate3d(0," + windowScrollTop + "px,0)"
+        const windowScrollTop = window.pageYOffset / 3
+        pageHeader.current.style.transform = 'translate3d(0,' + windowScrollTop + 'px,0)'
       }
-      window.addEventListener("scroll", updateScroll)
+      window.addEventListener('scroll', updateScroll)
       return function cleanup() {
-        window.removeEventListener("scroll", updateScroll)
+        window.removeEventListener('scroll', updateScroll)
       }
     }
   })
@@ -24,15 +24,15 @@ function EventPageHeader() {
     <>
       <div
         style={{
-          backgroundImage: "url(" + require("assets/img/fabio-mangione.jpg").default + ")"
+          backgroundImage: 'url(' + require('assets/img/fabio-mangione.jpg').default + ')'
         }}
-        className='page-header page-header-xs'
+        className="page-header page-header-xs"
         data-parallax={true}
         ref={pageHeader}
       >
-        <div className='filter' />
+        <div className="filter" />
         <Container>
-          <div className='motto text-center'>
+          <div className="motto text-center">
             <h1>Events</h1>
           </div>
         </Container>

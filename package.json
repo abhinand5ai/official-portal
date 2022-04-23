@@ -3,7 +3,6 @@
   "version": "1.0.0",
   "description": "A online web portal for CSEGSA",
   "main": "./server/index.js",
-  "type": "module",
   "engines": {
     "npm": "=8.3.1",
     "node": "=16.14.0"
@@ -26,18 +25,19 @@
   },
   "homepage": "https://github.com/abhinand5ai/official-portal#readme",
   "dependencies": {
+    "body-parser": "^1.19.2",
     "chai": "^4.3.6",
     "chromedriver": "^99.0.0",
-    "express": "^4.17.3",
     "cors": "^2.8.5",
     "dotenv": "^16.0.0",
-    "body-parser": "^1.19.2",
+    "express": "^4.17.3",
+    "meta": "^2.2.25",
     "mongoose": "^6.2.9",
     "selenium-webdriver": "^4.1.1"
   },
   "devDependencies": {
     "@cucumber/cucumber": "^7.3.2",
-    "eslint": "^8.12.0",
+    "eslint": "^8.14.0",
     "eslint-config-google": "^0.14.0",
     "install": "^0.13.0",
     "npm": "^8.5.5"
